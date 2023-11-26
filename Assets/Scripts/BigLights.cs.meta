@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f6a3ad121a6f329408fc19da42a23bbf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _florescentMaterial: {fileID: 2100000, guid: e1eb878c206a544d590598934e8da510,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
