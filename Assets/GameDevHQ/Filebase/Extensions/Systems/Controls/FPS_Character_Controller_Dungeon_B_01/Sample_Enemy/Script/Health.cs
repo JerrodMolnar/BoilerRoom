@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private int Health_Points = 1;
+    //private int Health_Points = 1;
     private Skeleton_AI _skeletonAI;
     private BoxCollider _thisCollider;
 

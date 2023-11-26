@@ -31,15 +31,15 @@ namespace GameDevHQ.FileBase.Plugins.FPS_Character_Controller
         private bool _isGrounded;
         private FootstepSFX _footstepSFX;
 
-        [SerializeField][Tooltip("Smooth out the transition from moving to not moving")]
+/*        [SerializeField][Tooltip("Smooth out the transition from moving to not moving")]
         private float _smooth = 20.0f; //smooth out the transition from moving to not moving
         [SerializeField][Tooltip("How quickly the player head bobs")]
         private float _walkFrequency = 4.8f; //how quickly the player head bobs when walking
         [SerializeField][Tooltip("How quickly the player head bobs")]
         private float _runFrequency = 7.8f; //how quickly the player head bobs when running
         [SerializeField][Tooltip("How dramatic the headbob is")][Range(0.0f, 0.2f)]
-        private float _heightOffset = 0.05f; //how dramatic the bobbing is
-        private float _timer = Mathf.PI / 2; //This is where Sin = 1 -- used to simulate walking forward. 
+        private float _heightOffset = 0.05f; //how dramatic the bobbing is*/
+        //private float _timer = Mathf.PI / 2; //This is where Sin = 1 -- used to simulate walking forward. 
         private Vector3 _initialCameraPos; //local position where we reset the camera when it's not bobbing
 
         [Header("Camera Settings")]
