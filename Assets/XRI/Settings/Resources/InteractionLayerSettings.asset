@@ -35,13 +35,13 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Frame3
+  - Frame2
+  - Frame1
+  - Mop
+  - Bronze Key
+  - Gold Key
+  - Silver Key
   - Gaze
   - Grab
   - Teleport

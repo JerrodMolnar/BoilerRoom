@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5869165013696435665}
   - component: {fileID: 5438833870428576803}
   - component: {fileID: 1662164378992862671}
-  - component: {fileID: 5273086884676048858}
   - component: {fileID: 8051882917859496908}
   - component: {fileID: 8188967567756325143}
   m_Layer: 0
@@ -292,27 +291,6 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_SortAtRoot: 0
---- !u!135 &5273086884676048858
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491452228936824696}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8051882917859496908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +316,7 @@ MonoBehaviour:
     type: 3}
   m_SmoothMotionEnabled: 1
   m_SmoothTurnEnabled: 0
-  m_UIScrollingEnabled: 0
+  m_UIScrollingEnabled: 1
   m_RayInteractorChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -720,7 +698,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 1877028954794048211}
   m_CameraFloorOffsetObject: {fileID: 7694488087052045771}
   m_RequestedTrackingOriginMode: 0
-  m_CameraYOffset: 1.2
+  m_CameraYOffset: 2
 --- !u!114 &775720177229534686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,9 +740,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1691859334458717402}
-  m_MoveSpeed: 5
-  m_EnableStrafe: 0
-  m_EnableFly: 1
+  m_MoveSpeed: 3
+  m_EnableStrafe: 1
+  m_EnableFly: 0
   m_UseGravity: 1
   m_GravityApplicationMode: 0
   m_ForwardSource: {fileID: 2345121880026951633}
@@ -2443,8 +2421,8 @@ MonoBehaviour:
   m_UIScroll: {fileID: -6756787485274679044, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   m_SmoothMotionEnabled: 0
-  m_SmoothTurnEnabled: 0
-  m_UIScrollingEnabled: 0
+  m_SmoothTurnEnabled: 1
+  m_UIScrollingEnabled: 1
   m_RayInteractorChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3625,7 +3603,7 @@ Transform:
   m_GameObject: {fileID: 7694488087052045771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
