@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 34450638556790519}
   - component: {fileID: 9016595764053886145}
   - component: {fileID: 3323071000755746872}
-  - component: {fileID: 6414286823634273564}
   m_Layer: 0
   m_Name: AirVentCover_01
   m_TagString: Untagged
@@ -26,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3900466323773230308}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.42728066, y: 2.21, z: -2.8879597}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9016595764053886145
 MeshFilter:
@@ -52,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -82,47 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6414286823634273564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3900466323773230308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fcb51f6d678d2498af4fb5f59a2c8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemType: 0
-  examineType: 1
-  examineRotate: 3
-  messageType: 0
-  disableType: 0
-  ItemName: 
-  Message: 
-  MessageTime: 3
-  MessageTips: []
-  PickupSound: {fileID: 0}
-  ExamineSound: {fileID: 0}
-  Volume: 1
-  Amount: 1
-  pickupSwitch: 0
-  examineCollect: 0
-  enableCursor: 0
-  showItemName: 1
-  autoShortcut: 0
-  floatingIconEnabled: 1
-  WeaponID: 0
-  InventoryID: 0
-  BackpackExpand: 0
-  ExamineDistance: 0
-  faceToCamera: 0
-  CollidersDisable: []
-  CollidersEnable: []
-  paperReadText: 
-  textSize: 0
-  faceRotation: {x: 0, y: 0, z: 0}
-  isExamined: 0
-  itemHashtables: []
-  lastFloorPosition: {x: 0, y: 0, z: 0}
