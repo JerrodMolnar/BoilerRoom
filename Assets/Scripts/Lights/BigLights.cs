@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BigLights : MonoBehaviour
@@ -5,6 +6,8 @@ public class BigLights : MonoBehaviour
     private Light _light;
     [SerializeField]
     private Material _florescentMaterial;
+    private WaitForSeconds _flicker = new WaitForSeconds(0.05f);
+    private WaitForSeconds _longFlicker = new WaitForSeconds(.25f);
 
     void Start()
     {
@@ -27,16 +30,41 @@ public class BigLights : MonoBehaviour
         BigLightActivation.lightsEvent -= UpdateLights;
     }
 
+    private IEnumerator LightFlicker()
+    {
+        _light.enabled = true;
+        while (true)
+        {
+            yield return _flicker;
+            _light.intensity = Random.Range(5f, 20f);
+            yield return _flicker;
+            _light.intensity = Random.Range(5f, 20f);
+            yield return _flicker;
+            _light.intensity = Random.Range(5f, 20f);
+            yield return _longFlicker;
+            _light.intensity = Random.Range(5f, 20f);
+            yield return _flicker;
+            _light.intensity = Random.Range(5f, 20f);
+            yield return _flicker;
+            _light.intensity = Random.Range(5f, 20f);
+            yield return _longFlicker;
+            _light.intensity = Random.Range(5f, 20f);
+            yield return _longFlicker;
+            _light.intensity = Random.Range(5f, 20f);
+        }
+    }
+
     public void UpdateLights()
     {
         if (!_light.enabled)
         {
-            _light.enabled = true;
+            StartCoroutine(LightFlicker());
             _florescentMaterial.EnableKeyword("_EMISSION");
         }
         else
         {
             _light.enabled = false;
+            StopCoroutine(LightFlicker());
             _florescentMaterial.DisableKeyword("_EMISSION");
         }
     }

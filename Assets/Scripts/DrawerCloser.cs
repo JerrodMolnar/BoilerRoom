@@ -15,13 +15,13 @@ public class DrawerCloser : MonoBehaviour
     {
         if (_drawerActivate)
         {
-            if (transform.localPosition.z < 0)
+            if (transform.localPosition.z < _startPosition.z + 0)
             {
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, _startPosition.z + 0);
             }
-            else if (transform.localPosition.z > .3f)
+            else if (transform.localPosition.z > _startPosition.z + 0.3f)
             {
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0.3f);
+                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, _startPosition.z + 0.3f);
             }
         }
         else

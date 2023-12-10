@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BigLightActivation : MonoBehaviour
@@ -8,31 +6,17 @@ public class BigLightActivation : MonoBehaviour
     public static event LightsStatusChange lightsEvent;
     [SerializeField]
     private bool _lightsOn = false;
-    private bool _startingLights;
-    private bool _firstIteration = true;
-
-    private void Start()
-    {
-        _startingLights = _lightsOn;
-    }
 
     public void StatusChange()
     {
-        if (lightsEvent != null)
-        {
-            lightsEvent();
-        }
+        lightsEvent?.Invoke();
     }
 
-    private void Update()
+    private void Start()
     {
-        if (_firstIteration)
+        if (_lightsOn)
         {
-            _firstIteration = false;
-            if (_lightsOn)
-            {
-                StatusChange();
-            }
+            StatusChange();
         }
     }
 }
