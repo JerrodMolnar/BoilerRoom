@@ -54,9 +54,9 @@ public class BigLights : MonoBehaviour
         }
     }
 
-    public void UpdateLights()
+    public void UpdateLights(bool isActive)
     {
-        if (!_light.enabled)
+        if (isActive)
         {
             StartCoroutine(LightFlicker());
             _florescentMaterial.EnableKeyword("_EMISSION");

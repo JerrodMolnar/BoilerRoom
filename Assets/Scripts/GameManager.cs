@@ -4,6 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    AudioSource _resetLeverAudioSource;
+
+    private void Start()
+    {
+        if (_resetLeverAudioSource == null)
+        {
+            Debug.LogError("Reset lever audio source not found on GameManager.");
+        }
+    }
 
     public void RestartScene()
     {
@@ -12,7 +22,10 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SceneRestart()
     {
-        yield return new WaitForSeconds(7.5f);
+        while (_resetLeverAudioSource.isPlaying)
+        {
+            yield return null;
+        }
         SceneManager.LoadScene(0);
     }
 }

@@ -9,7 +9,9 @@ public class MaterialColorChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _material = GetComponent<Material>();
+        _material = GetComponent<MeshRenderer>().material;
+        if (_material == null)
+            Debug.LogError("Material not found on Material Color Change on " + name);
     }
 
     public void ColorChange()

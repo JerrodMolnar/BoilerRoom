@@ -18,7 +18,7 @@ public class LockUnlocked : MonoBehaviour
     public void DropLock()
     {
         locked = false;
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, _timeToWait);
     }
 
     private void OnTriggerEnter(Collider other)
