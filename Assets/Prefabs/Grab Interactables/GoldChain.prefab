@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6939218186871263869}
   - component: {fileID: 4003706724704506977}
   - component: {fileID: 4319364098004329133}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GoldChain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 1073741824
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1

@@ -115,7 +115,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943082934775209398}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
   m_Name: 
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 67108864
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1454594968690240323}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee842d89c5ea8e44ab72b16a21a0c970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locked: 1
   _timeToWait: 5
+  _speed: 1
 --- !u!1 &1572034946664780795
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 8880331521504022544}
   - component: {fileID: 3233670678008632844}
   - component: {fileID: 2342222103640039616}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BronzeChain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,13 +237,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.085703835, y: -0.0000014924959, z: 0.000017350501, w: 0.99632066}
   m_LocalPosition: {x: -0.018048704, y: 1.3455702, z: 0.19593811}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.50000006, y: 0.5000001, z: 0.50000006}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1322394735562747528}
   - {fileID: 4578882634133399620}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 9.833, y: 180, z: 0.002}
+  m_LocalEulerAnglesHint: {x: 9.833, y: 0, z: 0.002}
 --- !u!33 &612848886386863986
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 1073741824
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -521,7 +521,7 @@ Transform:
   m_GameObject: {fileID: 4778752225359879766}
   serializedVersion: 2
   m_LocalRotation: {x: -0.82903755, y: 0, z: 0, w: 0.559193}
-  m_LocalPosition: {x: 0, y: -0.0421, z: 0.012}
+  m_LocalPosition: {x: 0, y: -0.0421, z: 0.0471}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -653,7 +653,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 67108864
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 3849434195607059174}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -667,9 +667,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8147100295321446814}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 943082934775209398}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -731,8 +731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee842d89c5ea8e44ab72b16a21a0c970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locked: 1
   _timeToWait: 5
+  _speed: 1
 --- !u!1 &5638356794844752964
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +758,7 @@ Transform:
   m_GameObject: {fileID: 5638356794844752964}
   serializedVersion: 2
   m_LocalRotation: {x: -0.82903755, y: 0, z: 0, w: 0.559193}
-  m_LocalPosition: {x: 0, y: -0.0421, z: 0.012}
+  m_LocalPosition: {x: 0, y: -0.0421, z: 0.0471}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

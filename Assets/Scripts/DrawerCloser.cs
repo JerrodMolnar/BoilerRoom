@@ -15,24 +15,14 @@ public class DrawerCloser : MonoBehaviour
     {
         if (_drawerActivate)
         {
-            if (transform.localPosition.z < _startPosition.z + 0)
-            {
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, _startPosition.z + 0);
-            }
-            else if (transform.localPosition.z > _startPosition.z + 0.3f)
-            {
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, _startPosition.z + 0.3f);
-            }
+            return;
         }
-        else
-        {
-            transform.localPosition = _startPosition;
-        }
-
+        transform.localPosition = _startPosition;
     }
 
     public void GrabDrawer()
     {
         _drawerActivate = true;
+        Debug.LogWarning("Drawer Grabbed " + name);
     }
 }

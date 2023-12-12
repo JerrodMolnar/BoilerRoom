@@ -1,31 +1,42 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class LockUnlocked : MonoBehaviour
 {
-    private bool locked = true;
     [SerializeField] private float _timeToWait = 5f;
     [SerializeField] private float _speed = 1f;
+    XRSocketInteractor _interactor;
+    Rigidbody _rigidbody;
 
-    private void Update()
+    private void Start()
     {
-        if (!locked)
-        {
-            transform.Translate(Vector3.down * _speed * Time.deltaTime, Space.World);
-        }
-    }
+        _interactor = GetComponent<XRSocketInteractor>();
+        if (_interactor == null)
+            Debug.LogError("Socket interactor not found on LockUnlocked on " + name);
+    }    
 
     public void DropLock()
     {
-        locked = false;
-        Destroy(gameObject, _timeToWait);
+        _rigidbody = gameObject.AddComponent<Rigidbody>();
+        _rigidbody.useGravity = true;
+        StartCoroutine(destroyTimer());
+    }
+
+    private IEnumerator destroyTimer()
+    {
+        Destroy(_interactor.GetOldestInteractableSelected().transform.gameObject);
+        yield return new WaitForSeconds(_timeToWait);        
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ground"))
         {
-            _speed = 0;
+            Debug.LogWarning("Lock hit ground on " + transform.parent.name);
+            _rigidbody.useGravity = false;
+            _rigidbody.velocity = Vector3.zero;
         }
     }
 }
