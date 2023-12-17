@@ -22,10 +22,17 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SceneRestart()
     {
+        _resetLeverAudioSource.Play();
         while (_resetLeverAudioSource.isPlaying)
         {
             yield return null;
         }
         SceneManager.LoadScene(0);
+    }        
+
+    public void QuitGame()
+    {
+        
+        Application.Quit();
     }
 }
