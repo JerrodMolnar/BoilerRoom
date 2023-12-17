@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class FoodDestroyer : MonoBehaviour
 {
     private XRSocketInteractor _interactor;
-    private float _speed = 0.5f;
+    private float _speed = 1.5f;
     private bool _isSocketed = false;
 
     private void Start()

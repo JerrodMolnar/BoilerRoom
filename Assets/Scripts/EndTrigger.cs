@@ -6,24 +6,31 @@ using UnityEngine;
 public class EndTrigger : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _endCanvas, _lifeText;
+    private GameObject _endCanvas;
+    [SerializeField]
+    private TMP_Text _lifeText;
     private float _lifeSeconds, _lifeMinutes, _lifeHours;
     private string _timeText;
-    
+
+    private void Start()
+    {
+        if (_endCanvas == null)
+        {
+            Debug.LogError("End Canvas is null on EndTrigger");
+        }
+
+        if (_lifeText == null)
+        {
+            Debug.LogError("Life Text is null on EndTrigger");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (_endCanvas != null)
-            {
-                _endCanvas.SetActive(true);
-            }
-            else
-            {
-                Debug.Log("End Canvas not found on EndTrigger");
-            }
-            _lifeSeconds = Time.time;
-            
+            _endCanvas.SetActive(true);
+
             if (_lifeSeconds > 60)
             {
                 _lifeMinutes = _lifeSeconds / 60;
@@ -32,11 +39,11 @@ public class EndTrigger : MonoBehaviour
                 {
                     _lifeHours = _lifeMinutes / 60;
                     _lifeMinutes = _lifeMinutes % 60;
-                }                
+                }
             }
             _timeText = "This took " + _lifeHours + " hours " + _lifeMinutes + " minutes "
                 + _lifeSeconds + " seconds.";
-            _lifeText.GetComponent<TextMeshPro>().text = _timeText;
+            _lifeText.text = _timeText;
             Debug.Log(_timeText);
             GetComponent<BoxCollider>().enabled = false;
         }
