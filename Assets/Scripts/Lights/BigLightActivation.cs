@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BigLightActivation : MonoBehaviour
 {
@@ -20,15 +21,25 @@ public class BigLightActivation : MonoBehaviour
 
     private void Start()
     {
-        if (_lightsOn)
+        if (!_lightsOn)
+        {
+            StartCoroutine(LightsOff());
+        }
+        else
         {
             StartCoroutine(LightsOn());
         }
     }
 
+    private IEnumerator LightsOff()
+    {
+        yield return new WaitForEndOfFrame();
+        LightsDeactivate();
+    }
+
     private IEnumerator LightsOn()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0.5f);
         LightsActivate();
     }
 }

@@ -19,15 +19,20 @@ public class HintSystem : MonoBehaviour
     {
         _transform = t;
         transform.position = _transform.position;
-        _particles.Play();
-        Debug.Log("Particles played on " + t.name);
+        if (!_particles.isPlaying)
+        {
+            _particles.Play();
+        }
+        else
+        {
+            StopParticle();
+        }
     }
 
     public void StopParticle()
     {
         _particles.Stop();
         _particles.Clear();
-        Debug.Log("Particles Stopped on " + _transform.name);
     }
 
 }
