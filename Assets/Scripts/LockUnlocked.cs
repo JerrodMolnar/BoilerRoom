@@ -41,7 +41,7 @@ public class LockUnlocked : MonoBehaviour
         {
             _locked = true;
             Debug.LogWarning("Lock hit ground on " + transform.parent.name);
-            transform.position = transform.position + (Vector3.up * 0.01f);
+            transform.position = transform.position + (Vector3.up * 0.25f);
         }
     }
 }

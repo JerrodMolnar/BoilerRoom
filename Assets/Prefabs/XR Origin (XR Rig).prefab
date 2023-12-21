@@ -366,12 +366,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704500076284329418}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.24, y: -0.88, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0.8089145, y: -0, z: -0, w: 0.58792645}
+  m_LocalPosition: {x: -0.24, y: -0.5, z: 0.5}
+  m_LocalScale: {x: 0.1, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4007893081949550725}
+  m_Father: {fileID: 2345121880026951633}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &882184081495216991
 MeshFilter:
@@ -1504,8 +1504,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1745,6 +1754,7 @@ Transform:
   m_Children:
   - {fileID: 4092379789178536867}
   - {fileID: 489607667238917795}
+  - {fileID: 7142983005078889311}
   m_Father: {fileID: 4007893081949550725}
   m_LocalEulerAnglesHint: {x: -17.98, y: 0, z: 0}
 --- !u!20 &8530521716729399087
@@ -2668,8 +2678,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3328,7 +3347,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.005
+    widthMultiplier: 0.02
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -3339,8 +3358,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3610,7 +3638,6 @@ Transform:
   - {fileID: 2345121880026951633}
   - {fileID: 5869165013696435665}
   - {fileID: 2016263347618194269}
-  - {fileID: 7142983005078889311}
   - {fileID: 742795594901829571}
   m_Father: {fileID: 4391559085627365913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3641,7 +3668,7 @@ Transform:
   m_GameObject: {fileID: 8641689494081122974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3666,7 +3693,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.05, y: 0.05, z: 0.05}
+  m_Size: {x: 0.25, y: 0.05, z: 0.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5525376217591526114
 MonoBehaviour:

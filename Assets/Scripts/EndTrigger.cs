@@ -30,7 +30,7 @@ public class EndTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _endCanvas.SetActive(true);
-
+            _lifeSeconds = Time.time;
             if (_lifeSeconds > 60)
             {
                 _lifeMinutes = _lifeSeconds / 60;
