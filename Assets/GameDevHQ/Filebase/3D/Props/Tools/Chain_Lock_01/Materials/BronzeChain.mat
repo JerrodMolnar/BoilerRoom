@@ -43,6 +43,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 0.23584908, g: 0.11975453, b: 0, a: 1}
-    - _Color: {r: 0.23584905, g: 0.1197545, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 0.51666665, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.5166666, b: 0, a: 1}
   m_BuildTextureStacks: []
