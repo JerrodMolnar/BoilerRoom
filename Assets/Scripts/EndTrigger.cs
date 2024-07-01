@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,12 +14,12 @@ public class EndTrigger : MonoBehaviour
     {
         if (_endCanvas == null)
         {
-            Debug.LogError("End Canvas is null on EndTrigger");
+            Debug.LogError("End Canvas is null on EndTrigger on " + gameObject.name);
         }
 
         if (_lifeText == null)
         {
-            Debug.LogError("Life Text is null on EndTrigger");
+            Debug.LogError("Life Text is null on EndTrigger on " + gameObject.name);
         }
     }
 

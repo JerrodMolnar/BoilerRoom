@@ -7,7 +7,7 @@ public class BigLights : MonoBehaviour
     [SerializeField]
     private Material _florescentMaterial;
     private WaitForSeconds _flicker = new WaitForSeconds(0.05f);
-    private WaitForSeconds _longFlicker = new WaitForSeconds(.25f);
+    private WaitForSeconds _longFlicker = new(.25f);
 
     void Start()
     {
@@ -62,9 +62,9 @@ public class BigLights : MonoBehaviour
             _florescentMaterial.EnableKeyword("_EMISSION");
         }
         else
-        {
-            _light.enabled = false;
+        {            
             StopCoroutine(LightFlicker());
+            _light.enabled = false;
             _florescentMaterial.DisableKeyword("_EMISSION");
         }
     }

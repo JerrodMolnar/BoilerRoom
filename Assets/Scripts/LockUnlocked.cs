@@ -4,22 +4,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class LockUnlocked : MonoBehaviour
 {
-    [SerializeField] private float _timeToWait = 5f;
     XRSocketInteractor _interactor;
     bool _locked = true;
     float _speed = .5f;
+    WaitForEndOfFrame _waitForEndOfFrame;
 
     private void Start()
     {
+        _waitForEndOfFrame = new WaitForEndOfFrame();
         _interactor = GetComponent<XRSocketInteractor>();
         if (_interactor == null)
             Debug.LogError("Socket interactor not found on LockUnlocked on " + name);
-    }
-
-    private void Update()
-    {
-        if (_locked) return;
-        else transform.Translate(Vector3.down * _speed * Time.deltaTime, Space.World);
     }
 
     public void DropLock()
@@ -31,7 +26,11 @@ public class LockUnlocked : MonoBehaviour
     private IEnumerator destroyTimer()
     {
         Destroy(_interactor.GetOldestInteractableSelected().transform.gameObject);
-        yield return new WaitForSeconds(_timeToWait);        
+        while (!_locked)
+        {
+            transform.Translate(Vector3.down * _speed * Time.deltaTime, Space.World);
+            yield return _waitForEndOfFrame;
+        }
         Destroy(gameObject);
     }
 
