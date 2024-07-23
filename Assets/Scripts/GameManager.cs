@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     AudioSource _resetLeverAudioSource;
+    WaitForSeconds _sleep = new WaitForSeconds(.5f);
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
         _resetLeverAudioSource.Play();
         while (_resetLeverAudioSource.isPlaying)
         {
-            yield return null;
+            yield return _sleep;
         }
         SceneManager.LoadScene(0);
     }        

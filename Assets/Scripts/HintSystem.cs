@@ -16,14 +16,7 @@ public class HintSystem : MonoBehaviour
     {
         _transform = t;
         transform.position = _transform.position;
-        if (!_particles.isPlaying)
-        {
-            _particles.Play();
-        }
-        else
-        {
-            StopParticle();
-        }
+        _particles.Play();
     }
 
     public void StopParticle()

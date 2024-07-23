@@ -19,8 +19,8 @@ public class LockUnlocked : MonoBehaviour
 
     public void DropLock()
     {
-        StartCoroutine(destroyTimer());
         _locked = false;
+        StartCoroutine(destroyTimer());
     }
 
     private IEnumerator destroyTimer()

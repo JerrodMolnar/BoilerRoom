@@ -12,7 +12,7 @@ public class FireLight : MonoBehaviour
     private int _positiveRange = 1;
     private ParticleSystem _fireParticles;
     private AudioSource _fireAudio;
-    private WaitForEndOfFrame _waitForEndOfFrame = new WaitForEndOfFrame();
+    private WaitForSeconds _fireLightWait = new WaitForSeconds(1);
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,7 @@ public class FireLight : MonoBehaviour
             {
                 _positiveRange = -_positiveRange;
             }
-            yield return _waitForEndOfFrame;
+            yield return _fireLightWait;
         }
     }
 

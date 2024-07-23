@@ -32,7 +32,6 @@ public class BigLights : MonoBehaviour
 
     private IEnumerator LightFlicker()
     {
-        _light.enabled = true;
         while (true)
         {
             yield return _flicker;
@@ -58,6 +57,7 @@ public class BigLights : MonoBehaviour
     {
         if (isActive)
         {
+            _light.enabled = true;
             StartCoroutine(LightFlicker());
             _florescentMaterial.EnableKeyword("_EMISSION");
         }

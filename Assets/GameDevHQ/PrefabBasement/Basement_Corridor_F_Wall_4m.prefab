@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5263766936090829486}
   - component: {fileID: 5263766936090026638}
   - component: {fileID: 5263766936088928334}
-  - component: {fileID: 5704178970194219684}
+  - component: {fileID: 4512731698397781701}
   m_Layer: 0
   m_Name: Basement_Corridor_F_Wall_4m
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5704178970194219684
+--- !u!65 &4512731698397781701
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,5 +103,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 400, y: 400, z: 0.1}
-  m_Center: {x: 0, y: 200, z: -10}
+  m_Size: {x: 400.0001, y: 400, z: 5.684342e-12}
+  m_Center: {x: 1.4210855e-13, y: 200, z: -10.000002}

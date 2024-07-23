@@ -16,7 +16,7 @@ public class TrashCan : MonoBehaviour
         GameObject.Find("Objectives").GetChildGameObjects(objectList);
         foreach (GameObject gameObject in objectList)
         {
-            if (gameObject.GetComponent<GrabInteractable>() != null)
+            if (gameObject.GetComponent<XRGrabInteractable>() != null)
             {
                 _gameObjects.Add(gameObject);
                 _startPositions.Add(gameObject.transform.position);
