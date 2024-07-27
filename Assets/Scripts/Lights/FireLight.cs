@@ -56,6 +56,7 @@ public class FireLight : MonoBehaviour
     {
         _fireParticles.Play();
         _fireAudio.Play();
+        _light.enabled = true;
         StartCoroutine(FireFlicker());
     }
 
@@ -64,6 +65,7 @@ public class FireLight : MonoBehaviour
         _fireParticles.Stop();
         _fireParticles.Clear();
         _fireAudio.Stop();
+        _light.enabled = false;
         StopCoroutine(FireFlicker());
     }
 }

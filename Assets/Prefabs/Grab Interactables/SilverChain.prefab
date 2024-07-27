@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1422585979719695182
 Transform:
   m_ObjectHideFlags: 0
@@ -140,18 +140,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 488634349437330331}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 2717969924647685839}
         m_TargetAssemblyTypeName: LockUnlocked, Assembly-CSharp
         m_MethodName: DropLock
@@ -168,6 +156,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: HintSystem, Assembly-CSharp
         m_MethodName: StopParticle
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 488634349437330331}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -228,7 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee842d89c5ea8e44ab72b16a21a0c970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToWait: 5
 --- !u!1 &1317206340529913740
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +362,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 5
@@ -809,4 +808,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee842d89c5ea8e44ab72b16a21a0c970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToWait: 5
