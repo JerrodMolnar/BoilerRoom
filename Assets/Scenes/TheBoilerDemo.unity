@@ -2924,11 +2924,6 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5337178920131338077}
-    - target: {fileID: 844708193288660819, guid: 650bd2353bc348642a68664e48f0824c,
-        type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     - target: {fileID: 2535775443367500087, guid: 650bd2353bc348642a68664e48f0824c,
         type: 3}
       propertyPath: m_Name
@@ -2993,16 +2988,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8116661803226549186, guid: 650bd2353bc348642a68664e48f0824c,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8116661803226549186, guid: 650bd2353bc348642a68664e48f0824c,
-        type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13405,12 +13390,17 @@ PrefabInstance:
     - target: {fileID: 6878513250531122461, guid: 95a82343fb2a76a47aad1c28e530f643,
         type: 3}
       propertyPath: m_Spring.damper
-      value: 50.95
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878513250531122461, guid: 95a82343fb2a76a47aad1c28e530f643,
+        type: 3}
+      propertyPath: m_Limits.bounciness
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6878513250531122461, guid: 95a82343fb2a76a47aad1c28e530f643,
         type: 3}
       propertyPath: m_Limits.bounceMinVelocity
-      value: 0
+      value: 3.4028233e+38
       objectReference: {fileID: 0}
     - target: {fileID: 7058788491789478052, guid: 95a82343fb2a76a47aad1c28e530f643,
         type: 3}
@@ -23044,6 +23034,16 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 2001084433}
+    - target: {fileID: 1324528429261354950, guid: 818c40e72a3210f4f96d560edf48a330,
+        type: 3}
+      propertyPath: m_LeftHandTurnAction.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324528429261354950, guid: 818c40e72a3210f4f96d560edf48a330,
+        type: 3}
+      propertyPath: m_RightHandTurnAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1877028954794048211, guid: 818c40e72a3210f4f96d560edf48a330,
         type: 3}
       propertyPath: m_Name
@@ -23128,6 +23128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MoveSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351219407751801791, guid: 818c40e72a3210f4f96d560edf48a330,
+        type: 3}
+      propertyPath: m_EnableStrafe
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7436195819011304524, guid: 818c40e72a3210f4f96d560edf48a330,
         type: 3}
