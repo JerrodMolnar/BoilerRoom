@@ -560,7 +560,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 1877028954794048211}
   m_CameraFloorOffsetObject: {fileID: 7694488087052045771}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 0
+  m_CameraYOffset: 1
 --- !u!114 &775720177229534686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,8 +602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1691859334458717402}
-  m_MoveSpeed: 1
-  m_EnableStrafe: 1
+  m_MoveSpeed: 5
+  m_EnableStrafe: 0
   m_EnableFly: 0
   m_UseGravity: 1
   m_GravityApplicationMode: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LocomotionProvider: {fileID: 7351219407751801791}
-  m_MinHeight: 0
+  m_MinHeight: 1.25
   m_MaxHeight: Infinity
 --- !u!114 &3786557058877045434
 MonoBehaviour:
@@ -3160,7 +3160,7 @@ MonoBehaviour:
   m_EnableARRaycasting: 0
   m_OccludeARHitsWith3DObjects: 0
   m_OccludeARHitsWith2DObjects: 0
-  m_ScaleMode: 0
+  m_ScaleMode: 1
 --- !u!120 &7504062312972336185
 LineRenderer:
   serializedVersion: 2
@@ -3651,7 +3651,7 @@ Transform:
   m_GameObject: {fileID: 7694488087052045771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
