@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -25,7 +26,15 @@ public class LockUnlocked : MonoBehaviour
 
     private IEnumerator destroyTimer()
     {
-        Destroy(_interactor.GetOldestInteractableSelected().transform.gameObject);
+        try
+        {
+            GameObject keySocket = _interactor.GetOldestInteractableSelected().transform.gameObject;
+            Destroy(keySocket);
+        }
+        catch (NullReferenceException)
+        {
+            Debug.LogError("Keysocket on Lock unlocked on " + name + " is null");
+        }
         while (!_locked)
         {
             transform.Translate(Vector3.down * _speed * Time.deltaTime, Space.World);
