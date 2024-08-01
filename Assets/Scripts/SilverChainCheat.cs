@@ -33,9 +33,16 @@ public class SilverChainCheat : MonoBehaviour
 
     public void CheatToEnd()
     {
-        lock1.DropLock();
-        lock2.gameObject.SetActive(true);
-        lock2.DropLock();
+        if (lock1 != null)
+        {
+            lock1.DropLock();
+        }
+        if (lock2 != null)
+        {
+            lock2.gameObject.SetActive(true);
+            lock2.DropLock();
+        }
+        
         _meshCollider.enabled = true;
         _xrInteractable.enabled = true;        
     }

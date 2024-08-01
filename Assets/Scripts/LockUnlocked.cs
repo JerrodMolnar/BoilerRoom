@@ -33,7 +33,7 @@ public class LockUnlocked : MonoBehaviour
         }
         catch (NullReferenceException)
         {
-            Debug.LogError("Keysocket on Lock unlocked on " + name + " is null");
+            Debug.LogWarning("Keysocket on Lock unlocked on " + name + " is null");
         }
         while (!_locked)
         {
@@ -48,7 +48,6 @@ public class LockUnlocked : MonoBehaviour
         if (other.CompareTag("Ground"))
         {
             _locked = true;
-            Debug.LogWarning("Lock hit ground on " + transform.parent.name);
             transform.position = transform.position + (Vector3.up * 0.25f);
         }
     }
