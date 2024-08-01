@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
@@ -8,6 +10,8 @@ public class TrashCan : MonoBehaviour
     List <GameObject> _gameObjects = new List<GameObject>();
     List<Vector3> _startPositions = new List<Vector3>();
     XRSocketInteractor _socketInteractor;
+    AudioSource _audioSource;
+    WaitForSeconds _sleep = new WaitForSeconds(0.5f);
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +20,7 @@ public class TrashCan : MonoBehaviour
         GameObject.Find("Objectives").GetChildGameObjects(objectList);
         foreach (GameObject gameObject in objectList)
         {
-            if (gameObject.GetComponent<XRGrabInteractable>() != null)
+            if (gameObject.CompareTag("Grab Interactable") && gameObject.GetComponent<XRGrabInteractable>() != null)
             {
                 _gameObjects.Add(gameObject);
                 _startPositions.Add(gameObject.transform.position);
@@ -27,16 +31,39 @@ public class TrashCan : MonoBehaviour
         {
             Debug.LogError("Socket Interactor is null on Trashcan on " +  gameObject.name);
         }
+
+        _audioSource = GetComponent<AudioSource>();
+        if (_audioSource == null)
+        {
+            Debug.LogError("Audio source is null on Trashcan on " + name);
+        }
     }
 
     public void DestroyObject()
     {
+        Debug.Log("DestroyObject Function");
+        GameObject socketedObject = _socketInteractor.GetOldestInteractableSelected().transform.gameObject;
         for (int i = 0; i < _gameObjects.Count; i++)
         {
-            if (_gameObjects[i] ==(GameObject) _socketInteractor.GetOldestInteractableSelected().transform.gameObject)
+            if (_gameObjects[i] == socketedObject)
             {
-                _gameObjects[i].transform.position = _startPositions[i];
+                _audioSource.Play();
+                StartCoroutine(MoveObject(i, socketedObject));
+                return;
             }
+        }
+    }
+
+    private IEnumerator MoveObject(int i, GameObject socketedObject)
+    {
+        while (_audioSource.isPlaying)
+        {
+            if (_audioSource.time > 2.5f)
+            {
+                _socketInteractor.interactionManager.SelectExit(_socketInteractor, _socketInteractor.GetOldestInteractableSelected());
+                socketedObject.transform.position = _startPositions[i];                
+            }
+            yield return _sleep;
         }
     }
 

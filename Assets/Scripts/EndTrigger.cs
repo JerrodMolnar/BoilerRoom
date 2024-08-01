@@ -7,7 +7,7 @@ public class EndTrigger : MonoBehaviour
     private GameObject _endCanvas;
     [SerializeField]
     private TMP_Text _lifeText;
-    private float _lifeSeconds, _lifeMinutes, _lifeHours;
+    private int _lifeSeconds, _lifeMinutes, _lifeHours;
     private string _timeText;
 
     private void Start()
@@ -28,7 +28,7 @@ public class EndTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _endCanvas.SetActive(true);
-            _lifeSeconds = Time.time;
+            _lifeSeconds = (int) Time.time;
             if (_lifeSeconds > 60)
             {
                 _lifeMinutes = _lifeSeconds / 60;
